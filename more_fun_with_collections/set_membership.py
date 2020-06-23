@@ -3,7 +3,7 @@ Program: set_membership.py
 Author: Paul Elsea
 Last Modified: 06/23/2020
 
-Program to .
+Program to see if an element is included in a set.
 """
 
 '''Function to determine if element is included in an input set.
