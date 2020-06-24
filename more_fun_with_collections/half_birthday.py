@@ -6,11 +6,19 @@ Last Modified: 06/24/2020
 Program to average scores for a dictionary key chosen by the user.
 """
 
-'''This takes in a dictionary, prompts user for a group of scores to average. Results of averaged group
-of scores is returned, or an error message if user inputs invalid data.
-:input_dict: The dictionary that the user is choosing which key to work with
-:choice: The key the user will select to work with
-:returns: Averaged scores of chosen dictionary key or an error message'''
-def half_birthday(dateIn):
-    pass
-    return
+'''Imported datetime and dateutil modules'''
+import datetime
+from dateutil.relativedelta import relativedelta
+
+'''Takes an input date and returns date 6 months later.
+:date_in: Starting date input by program.
+:date_out: Date 6 months after date_in
+:returns: date_out'''
+def half_birthday(date_in):
+    date_out = date_in + relativedelta(months=+6)
+    return date_out
+
+
+if __name__ == '__main__':
+    six_months_later = half_birthday(datetime.date(1900, 1, 1))
+    print(six_months_later)
