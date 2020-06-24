@@ -14,22 +14,20 @@ of scores is printed, or error message is displayed and user is prompted for new
 :input_score: Each individual score to be validated and inserted into the dictionary.
 :returns: Populated score dictionary'''
 
-def switch_average():
-    scores_dict = {'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9], 'D': 0}
+def switch_average(input_dict):
     while True:
         choice = get_input()
 
         if choice == 'A' or choice =='a':
-            return average_scores(scores_dict, 'A')
+            return average_scores(input_dict, 'A')
         if choice == 'B' or choice == 'b':
-            return average_scores(scores_dict, 'B')
+            return average_scores(input_dict, 'B')
         if choice == 'C' or choice =='c':
-            return average_scores(scores_dict, 'C')
+            return average_scores(input_dict, 'C')
         if choice == 'D' or choice =='d':
-            return average_scores(scores_dict, 'D')
+            return average_scores(input_dict, 'D')
         else:
-            print("I'm sorry, I didn't recognize that. Please choose either A, B, C, or D.\n")
-            continue
+            return "I'm sorry, I didn't recognize that. Please choose either A, B, C, or D.\n"
 
 def get_input():
     user_choice = input('Please choose score set A, B, C, or D.\n')
@@ -81,4 +79,5 @@ def average_scores(input_dict, key_choice):
     return str('Average score is: ' + str(score_total / len(input_dict[key_choice])))
 
 if __name__ == '__main__':
-    print(switch_average())
+    scores_dict = {'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9], 'D': [0]}
+    print(switch_average(scores_dict))
